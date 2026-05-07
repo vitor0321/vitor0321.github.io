@@ -5,5 +5,4 @@
 
 * https://vitor0321.github.io/lexis-privacy-policy.txt
 
-* https://vitor0321.github.io/privacy-policy.txt
 * https://vitor0321.github.io/terms-of-use.txt
