@@ -3,322 +3,622 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Política de Privacidade e Termos de Serviço - Bible Lexis</title>
+  <title>Política de Privacidade e Termos de Serviço – Bible Lexis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
+    :root {
+      --parchment: #f7f3ec;
+      --ink: #1a1612;
+      --ink-light: #4a4540;
+      --gold: #8b6914;
+      --gold-light: #c49a2a;
+      --rule: #d4c9b0;
+      --section-bg: #f0ebe0;
+      --highlight: #e8dfc8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background-color: var(--parchment);
+      color: var(--ink);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    /* Texture overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Header */
+    .site-header {
+      background: var(--ink);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, #3a2e1a 0%, var(--ink) 70%);
+    }
+
+    .header-ornament {
+      font-family: 'Crimson Pro', serif;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+
+    .site-header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: clamp(28px, 5vw, 48px);
+      color: var(--parchment);
+      letter-spacing: 0.02em;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .site-header h1 em {
+      color: var(--gold-light);
+      font-style: italic;
+    }
+
+    .header-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px auto 16px;
+      position: relative;
+    }
+
+    .header-rule::before,
+    .header-rule::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold));
+    }
+
+    .header-rule::after {
+      background: linear-gradient(90deg, var(--gold), transparent);
+    }
+
+    .diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--gold-light);
+      transform: rotate(45deg);
+    }
+
+    .header-date {
+      font-size: 13px;
+      color: rgba(247,243,236,0.45);
+      position: relative;
+      letter-spacing: 0.05em;
+    }
+
+    /* TOC Nav */
+    .toc {
+      background: var(--ink);
+      border-bottom: 1px solid #2e2820;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .toc a {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,0.5);
+      text-decoration: none;
+      padding: 14px 12px;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .toc a:hover {
+      color: var(--gold-light);
+      border-bottom-color: var(--gold);
+    }
+
+    /* Layout */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Intro */
+    .intro {
+      margin: 48px 0 56px;
+      padding: 32px 36px;
+      background: var(--highlight);
+      border-left: 3px solid var(--gold);
+      font-family: 'Crimson Pro', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--ink-light);
       line-height: 1.7;
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-      color: #222;
-      background-color: #fff;
     }
 
-    h1, h2, h3 {
-      color: #111;
+    /* Chapter heading */
+    .chapter {
+      margin-top: 64px;
+      margin-bottom: 32px;
     }
 
-    h1 {
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 10px;
+    .chapter-label {
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
     }
 
-    h2 {
-      margin-top: 40px;
+    .chapter h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      font-size: clamp(26px, 4vw, 38px);
+      color: var(--ink);
+      line-height: 1.15;
+      letter-spacing: -0.01em;
     }
 
-    h3 {
-      margin-top: 25px;
+    .chapter-rule {
+      margin-top: 16px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--rule) 60%, transparent 100%);
     }
 
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
+    /* Section */
     .section {
-      margin-bottom: 30px;
+      margin: 40px 0;
     }
 
-    .contact {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 8px;
+    .section h3 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h3 .num {
+      font-size: 11px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      background: var(--highlight);
+      padding: 2px 8px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--ink-light);
+      margin-bottom: 14px;
+    }
+
+    /* Lists */
+    .section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: var(--ink-light);
+      padding: 12px 16px 12px 44px;
+      background: var(--section-bg);
+      border-radius: 4px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .section ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 16px;
+      top: 13px;
+      font-size: 9px;
+      color: var(--gold);
+    }
+
+    .section ul li strong {
+      color: var(--ink);
+      font-weight: 500;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    /* Subscription callout */
+    .callout {
+      background: linear-gradient(135deg, #f0e8d0 0%, #e8dfc8 100%);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+
+    .callout-title {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .callout ul {
+      gap: 8px !important;
+    }
+
+    .callout ul li {
+      background: rgba(255,255,255,0.6) !important;
+    }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .right-card {
+      background: var(--section-bg);
+      border-radius: 4px;
+      padding: 16px;
+      border-top: 2px solid var(--gold);
+      font-size: 14px;
+      color: var(--ink-light);
+    }
+
+    /* Divider */
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 72px 0 0;
+    }
+
+    .chapter-divider::before,
+    .chapter-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .chapter-divider-inner {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .chapter-divider .d {
+      width: 5px;
+      height: 5px;
+      background: var(--rule);
+      transform: rotate(45deg);
+    }
+
+    .chapter-divider .d.center {
+      background: var(--gold);
+      width: 7px;
+      height: 7px;
+    }
+
+    /* Contact */
+    .contact-block {
+      margin-top: 64px;
+      background: var(--ink);
+      border-radius: 6px;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, #3a2e1a 0%, var(--ink) 70%);
+    }
+
+    .contact-block * { position: relative; }
+
+    .contact-block .header-ornament {
+      margin-bottom: 12px;
+    }
+
+    .contact-block h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: 30px;
+      color: var(--parchment);
+      margin-bottom: 12px;
+    }
+
+    .contact-block p {
+      font-size: 14px;
+      color: rgba(247,243,236,0.5);
+      margin-bottom: 24px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      background: var(--gold);
+      color: var(--ink);
+    }
+
+    /* Footer */
+    .site-footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 12px;
+      color: #b0a898;
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Link */
+    a { color: var(--gold); }
+    a:hover { color: var(--gold-light); }
+
+    @media (max-width: 600px) {
+      .toc { gap: 0; }
+      .toc a { padding: 12px 8px; font-size: 10px; }
+      .intro { padding: 24px 20px; font-size: 16px; }
+      .contact-block { padding: 32px 20px; }
+      .rights-grid { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
 
 <body>
 
-  <h1>📑 Política de Privacidade e Termos de Serviço – Bible Lexis</h1>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-ornament">Bible Lexis · Documentos Legais</div>
+    <h1>Privacidade &amp; <em>Termos de Serviço</em></h1>
+    <div class="header-rule"><div class="diamond"></div></div>
+    <div class="header-date">Última atualização: 17 de abril de 2026</div>
+  </header>
 
-  <p><strong>Última atualização:</strong> 17 de abril de 2026</p>
+  <!-- Sticky TOC -->
+  <nav class="toc">
+    <a href="#privacidade">Privacidade</a>
+    <a href="#coleta">Coleta</a>
+    <a href="#uso">Uso</a>
+    <a href="#direitos">Seus direitos</a>
+    <a href="#termos">Termos</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-  <p>
-    Sua privacidade e confiança são muito importantes para nós.
-    Este documento contém a Política de Privacidade, Política de Cookies
-    e Termos de Serviço (“Contrato”) do Bible Lexis.
-  </p>
+  <div class="page-wrap">
 
-  <p>
-    Ao utilizar o Bible Lexis, você concorda com os termos descritos neste Contrato.
-    Caso não concorde, por favor, descontinue o uso do App.
-  </p>
+    <!-- Intro -->
+    <div class="intro">
+      Sua privacidade e confiança são muito importantes para nós. Ao utilizar o Bible Lexis,
+      você concorda com os termos descritos neste documento. Caso não concorde,
+      por favor, descontinue o uso do App.
+    </div>
 
-  <h2>🔒 Política de Privacidade</h2>
+    <!-- ── PRIVACIDADE ── -->
+    <div id="privacidade" class="chapter">
+      <span class="chapter-label">Parte I</span>
+      <h2>Política de Privacidade</h2>
+      <div class="chapter-rule"></div>
+    </div>
 
-  <div class="section">
-    <h3>1. Informações que Coletamos</h3>
+    <div id="coleta" class="section">
+      <h3><span class="num">01</span> Informações que Coletamos</h3>
+      <ul>
+        <li><strong>Fornecidas por você</strong>Nome, endereço de e-mail, credenciais de login e detalhes do perfil.</li>
+        <li><strong>Dados de uso</strong>Interações com o app, termos pesquisados, versículos favoritos e preferências de estudo.</li>
+        <li><strong>Informações do dispositivo</strong>Modelo, sistema operacional, idioma e identificadores exclusivos.</li>
+        <li><strong>Cookies e tecnologias semelhantes</strong>Utilizados para lembrar preferências e melhorar a experiência.</li>
+        <li><strong>Acesso a recursos</strong>O aplicativo pode solicitar acesso ao armazenamento, galeria ou notificações.</li>
+      </ul>
+    </div>
 
-    <ul>
-      <li>
-        <strong>Informações fornecidas por você:</strong>
-        Nome, endereço de e-mail, credenciais de login e detalhes do perfil.
-      </li>
+    <div id="uso" class="section">
+      <h3><span class="num">02</span> Como Usamos Suas Informações</h3>
+      <ul>
+        <li>Fornecer e melhorar os serviços do Bible Lexis.</li>
+        <li>Personalizar sua experiência de estudo bíblico.</li>
+        <li>Enviar notificações sobre atualizações e recursos.</li>
+        <li>Cumprir requisitos legais e regulatórios.</li>
+        <li>Detectar e prevenir fraudes.</li>
+      </ul>
+    </div>
 
-      <li>
-        <strong>Dados de uso:</strong>
-        Interações com o App, termos pesquisados, versículos favoritos
-        e preferências de estudo.
-      </li>
+    <div class="section">
+      <h3><span class="num">03</span> Compartilhamento de Informações</h3>
+      <p>Não vendemos ou alugamos suas informações pessoais. O compartilhamento poderá ocorrer apenas:</p>
+      <ul>
+        <li>Com provedores de serviços confiáveis.</li>
+        <li>Quando exigido por lei.</li>
+        <li>Em caso de fusão ou aquisição.</li>
+      </ul>
+    </div>
 
-      <li>
-        <strong>Informações do dispositivo:</strong>
-        Modelo do dispositivo, sistema operacional, idioma e identificadores exclusivos.
-      </li>
+    <div class="section">
+      <h3><span class="num">04</span> Armazenamento e Segurança</h3>
+      <p>Os dados são armazenados em servidores seguros com acesso restrito. Adotamos medidas técnicas e organizacionais para proteger suas informações, retendo-as apenas pelo tempo necessário.</p>
 
-      <li>
-        <strong>Cookies e tecnologias semelhantes:</strong>
-        Utilizados para lembrar preferências e melhorar a experiência.
-      </li>
+      <div class="callout">
+        <div class="callout-title">Informações sobre Assinaturas</div>
+        <ul>
+          <li>As assinaturas são renovadas automaticamente, salvo cancelamento realizado com pelo menos 24 horas antes do término do período atual.</li>
+          <li>O pagamento será cobrado na conta Apple ID ou Google Play após a confirmação da compra.</li>
+          <li>A renovação será cobrada dentro de 24 horas antes do final do período vigente.</li>
+          <li>O gerenciamento e cancelamento podem ser realizados nas configurações da sua conta da loja.</li>
+        </ul>
+      </div>
+    </div>
 
-      <li>
-        <strong>Acesso a recursos:</strong>
-        O aplicativo pode solicitar acesso ao armazenamento, galeria ou notificações.
-      </li>
-    </ul>
-  </div>
+    <div id="direitos" class="section">
+      <h3><span class="num">05</span> Seus Direitos (LGPD &amp; GDPR)</h3>
+      <div class="rights-grid">
+        <div class="right-card">Confirmar se processamos seus dados.</div>
+        <div class="right-card">Solicitar acesso, correção ou exclusão.</div>
+        <div class="right-card">Retirar o consentimento a qualquer momento.</div>
+        <div class="right-card">Solicitar portabilidade dos dados.</div>
+        <div class="right-card">Restringir ou opor-se ao processamento.</div>
+        <div class="right-card">Contatar-nos pelo e-mail abaixo.</div>
+      </div>
+    </div>
 
-  <div class="section">
-    <h3>2. Como Usamos Suas Informações</h3>
+    <div class="section">
+      <h3><span class="num">06</span> Cookies e Tecnologias Semelhantes</h3>
+      <p>Cookies são pequenos arquivos que melhoram sua experiência. Utilizamos para lembrar preferências e login, melhorar desempenho e segurança e analisar dados de uso. Podemos utilizar serviços de terceiros como Google Analytics.</p>
+    </div>
 
-    <ul>
-      <li>Fornecer e melhorar os serviços do Bible Lexis.</li>
-      <li>Personalizar sua experiência de estudo bíblico.</li>
-      <li>Enviar notificações sobre atualizações e recursos.</li>
-      <li>Cumprir requisitos legais e regulatórios.</li>
-      <li>Detectar e prevenir fraudes.</li>
-    </ul>
-  </div>
+    <div class="section">
+      <h3><span class="num">07</span> Links de Terceiros</h3>
+      <p>O aplicativo pode conter links para serviços externos. Não somos responsáveis pelas políticas de privacidade desses terceiros.</p>
+    </div>
 
-  <div class="section">
-    <h3>3. Compartilhamento de Informações</h3>
+    <div class="section">
+      <h3><span class="num">08</span> Alterações nesta Política</h3>
+      <p>Podemos atualizar esta Política periodicamente. Recomendamos a revisão regular deste documento.</p>
+    </div>
 
-    <p>
-      Não vendemos ou alugamos suas informações pessoais.
-      O compartilhamento poderá ocorrer apenas:
-    </p>
+    <!-- Divider -->
+    <div class="chapter-divider">
+      <div class="chapter-divider-inner">
+        <div class="d"></div>
+        <div class="d center"></div>
+        <div class="d"></div>
+      </div>
+    </div>
 
-    <ul>
-      <li>Com provedores de serviços confiáveis.</li>
-      <li>Quando exigido por lei.</li>
-      <li>Em caso de fusão ou aquisição.</li>
-    </ul>
-  </div>
+    <!-- ── TERMOS ── -->
+    <div id="termos" class="chapter">
+      <span class="chapter-label">Parte II</span>
+      <h2>Termos de Serviço</h2>
+      <div class="chapter-rule"></div>
+    </div>
 
-  <div class="section">
-    <h3>4. Armazenamento e Segurança dos Dados</h3>
+    <div class="section">
+      <h3><span class="num">01</span> Aceitação dos Termos</h3>
+      <p>Ao utilizar o Bible Lexis, você concorda com estes Termos de Serviço em sua totalidade.</p>
+    </div>
 
-    <p>
-      Os dados são armazenados em servidores seguros com acesso restrito.
-    </p>
+    <div class="section">
+      <h3><span class="num">02</span> Elegibilidade</h3>
+      <p>Você deve possuir pelo menos 13 anos de idade para utilizar o aplicativo.</p>
+    </div>
 
-    <p>
-      Adotamos medidas técnicas e organizacionais para proteger seus dados.
-    </p>
+    <div class="section">
+      <h3><span class="num">03</span> Responsabilidades do Usuário</h3>
+      <p>Você concorda em não realizar as seguintes ações:</p>
+      <ul>
+        <li>Realizar atividades ilegais por meio do aplicativo.</li>
+        <li>Tentar engenharia reversa do aplicativo ou seus sistemas.</li>
+        <li>Infringir direitos de propriedade intelectual.</li>
+        <li>Distribuir conteúdo ofensivo, malicioso ou prejudicial.</li>
+      </ul>
+    </div>
 
-    <p>
-      Os dados são retidos apenas pelo tempo necessário para cumprir
-      as finalidades descritas nesta Política.
-    </p>
+    <div class="section">
+      <h3><span class="num">04</span> Propriedade Intelectual</h3>
+      <p>Todo o conteúdo, marca e tecnologia do Bible Lexis pertencem aos seus respectivos proprietários e estão protegidos pela legislação aplicável.</p>
+    </div>
 
-    <h3>Informações sobre Assinaturas</h3>
+    <div class="section">
+      <h3><span class="num">05</span> Rescisão</h3>
+      <p>Reservamo-nos o direito de suspender ou encerrar contas que violem estes Termos, sem aviso prévio.</p>
+    </div>
 
-    <ul>
-      <li>
-        As assinaturas são renovadas automaticamente, salvo cancelamento
-        realizado com pelo menos 24 horas antes do término do período atual.
-      </li>
+    <div class="section">
+      <h3><span class="num">06</span> Isenção de Garantias</h3>
+      <p>O aplicativo é fornecido "como está", sem garantias expressas ou implícitas de qualquer natureza.</p>
+    </div>
 
-      <li>
-        O pagamento será cobrado na conta Apple ID do usuário após
-        a confirmação da compra.
-      </li>
+    <div class="section">
+      <h3><span class="num">07</span> Limitação de Responsabilidade</h3>
+      <p>O Bible Lexis não será responsável por danos diretos, indiretos ou consequentes decorrentes do uso ou impossibilidade de uso do aplicativo.</p>
+    </div>
 
-      <li>
-        A renovação será cobrada dentro de 24 horas antes do final
-        do período vigente.
-      </li>
+    <div class="section">
+      <h3><span class="num">08</span> Lei Aplicável</h3>
+      <p>Estes Termos são regidos pelas leis da República Federativa do Brasil.</p>
+    </div>
 
-      <li>
-        O gerenciamento e cancelamento da assinatura podem ser realizados
-        nas configurações da conta Apple ID.
-      </li>
-    </ul>
-  </div>
+    <!-- Contact -->
+    <div id="contato" class="contact-block">
+      <div class="header-ornament">Dúvidas ou solicitações</div>
+      <h2>Entre em contato</h2>
+      <p>Estamos à disposição para responder qualquer questão sobre privacidade ou os termos de serviço.</p>
+      <a href="mailto:vitor0321@gmail.com" class="contact-link">vitor0321@gmail.com</a>
+    </div>
 
-  <div class="section">
-    <h3>5. Seus Direitos</h3>
+  </div><!-- /page-wrap -->
 
-    <p>
-      De acordo com a LGPD e GDPR, você possui os seguintes direitos:
-    </p>
-
-    <ul>
-      <li>Confirmar se processamos seus dados.</li>
-      <li>Solicitar acesso, correção ou exclusão.</li>
-      <li>Retirar o consentimento.</li>
-      <li>Solicitar portabilidade.</li>
-      <li>Restringir ou opor-se ao processamento.</li>
-    </ul>
-
-    <p>
-      Para exercer seus direitos:
-      <a href="mailto:vitor0321@gmail.com">vitor0321@gmail.com</a>
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>6. Cookies e Tecnologias Semelhantes</h3>
-
-    <h3>6.1 O que são Cookies</h3>
-
-    <p>
-      Cookies são pequenos arquivos utilizados para melhorar sua experiência.
-    </p>
-
-    <h3>6.2 Como usamos Cookies</h3>
-
-    <ul>
-      <li>Lembrar preferências e login.</li>
-      <li>Melhorar desempenho e segurança.</li>
-      <li>Analisar dados de uso.</li>
-    </ul>
-
-    <h3>6.3 Cookies de Terceiros</h3>
-
-    <p>
-      Podemos utilizar serviços de terceiros como Google Analytics.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>7. Links de Terceiros</h3>
-
-    <p>
-      O aplicativo pode conter links para serviços externos.
-      Não somos responsáveis pelas políticas desses terceiros.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>8. Alterações nesta Política</h3>
-
-    <p>
-      Podemos atualizar esta Política periodicamente.
-    </p>
-  </div>
-
-  <h2>📜 Termos de Serviço</h2>
-
-  <div class="section">
-    <h3>1. Aceitação dos Termos</h3>
-
-    <p>
-      Ao utilizar o Bible Lexis, você concorda com estes Termos.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>2. Elegibilidade</h3>
-
-    <p>
-      Você deve possuir pelo menos 13 anos para utilizar o aplicativo.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>3. Responsabilidades do Usuário</h3>
-
-    <p>Você concorda em não:</p>
-
-    <ul>
-      <li>Realizar atividades ilegais.</li>
-      <li>Tentar engenharia reversa do aplicativo.</li>
-      <li>Infringir direitos de propriedade intelectual.</li>
-      <li>Distribuir conteúdo ofensivo ou malicioso.</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h3>4. Propriedade Intelectual</h3>
-
-    <p>
-      Todo o conteúdo do Bible Lexis pertence aos respectivos proprietários.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>5. Rescisão</h3>
-
-    <p>
-      Podemos suspender ou encerrar contas que violem estes Termos.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>6. Isenção de Garantias</h3>
-
-    <p>
-      O aplicativo é fornecido “como está”.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>7. Limitação de Responsabilidade</h3>
-
-    <p>
-      O Bible Lexis não será responsável por danos decorrentes do uso do App.
-    </p>
-  </div>
-
-  <div class="section">
-    <h3>8. Lei Aplicável</h3>
-
-    <p>
-      Estes Termos são regidos pelas leis do Brasil.
-    </p>
-  </div>
-
-  <div class="contact">
-    <h2>📩 Contato</h2>
-
-    <p>
-      Em caso de dúvidas:
-    </p>
-
-    <p>
-      📧
-      <a href="mailto:vitor0321@gmail.com">
-        vitor0321@gmail.com
-      </a>
-    </p>
-  </div>
+  <footer class="site-footer">
+    © 2026 Bible Lexis · Todos os direitos reservados
+  </footer>
 
 </body>
 </html>
