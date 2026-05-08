@@ -1,169 +1,527 @@
-
-# Termos de Uso — Bible Lexis
-
-Última atualização: 07 de maio de 2026
-
-Bem-vindo ao Bible Lexis.
-
-Estes Termos de Uso regulam o acesso e a utilização do aplicativo Bible Lexis. Ao utilizar o aplicativo, você concorda integralmente com estes Termos.
-
----
-
-# 1. Aceitação dos Termos
-
-Ao acessar ou utilizar o aplicativo Bible Lexis, o usuário declara ter lido, compreendido e aceitado estes Termos de Uso.
-
-Caso não concorde com qualquer parte destes Termos, o usuário não deverá utilizar o aplicativo.
-
----
-
-# 2. Descrição do Serviço
-
-O Bible Lexis é um aplicativo que oferece funcionalidades relacionadas a conteúdos bíblicos, estudos, recursos premium e serviços por assinatura.
-
-As funcionalidades podem ser alteradas, atualizadas ou removidas a qualquer momento, sem aviso prévio.
-
----
-
-# 3. Conta do Usuário
-
-Algumas funcionalidades podem exigir autenticação ou criação de conta.
-
-O usuário é responsável por:
-
-* Manter a confidencialidade de suas credenciais
-* Garantir a segurança de sua conta
-* Todas as atividades realizadas através de sua conta
-
-O Bible Lexis não se responsabiliza por acessos não autorizados decorrentes de negligência do usuário.
-
----
-
-# 4. Assinaturas e Pagamentos
-
-O aplicativo pode oferecer recursos premium através de assinaturas recorrentes.
-
-As assinaturas são processadas pela Apple App Store e/ou Google Play Store.
-
-Ao contratar uma assinatura, o usuário concorda que:
-
-* O pagamento será cobrado automaticamente de acordo com o plano selecionado
-* A assinatura será renovada automaticamente até cancelamento
-* O cancelamento deve ser realizado diretamente pela loja correspondente
-
----
-
-## 4.1 Cancelamento
-
-O usuário pode cancelar sua assinatura a qualquer momento através:
-
-### Apple App Store
-
-Configurações da conta Apple ID → Assinaturas
-
-### Google Play Store
-
-Conta Google Play → Pagamentos e Assinaturas
-
-O cancelamento impede futuras cobranças, mas não gera reembolso automático de valores já pagos.
-
----
-
-# 5. Uso Permitido
-
-O usuário concorda em utilizar o aplicativo apenas para fins legais e de acordo com estes Termos.
-
-É proibido:
-
-* Utilizar o aplicativo para atividades ilegais
-* Tentar acessar sistemas ou dados sem autorização
-* Realizar engenharia reversa do aplicativo
-* Distribuir versões modificadas do aplicativo
-* Utilizar o serviço de forma abusiva ou que prejudique outros usuários
-
----
-
-# 6. Propriedade Intelectual
-
-Todos os direitos relacionados ao Bible Lexis, incluindo:
-
-* Código-fonte
-* Interface
-* Design
-* Marca
-* Conteúdo exclusivo
-* Recursos visuais
-
-pertencem aos seus respectivos proprietários e são protegidos pelas leis aplicáveis de propriedade intelectual.
-
-Nenhum direito é transferido ao usuário além da licença limitada de uso do aplicativo.
-
----
-
-# 7. Disponibilidade do Serviço
-
-O Bible Lexis poderá passar por:
-
-* Atualizações
-* Manutenções
-* Interrupções temporárias
-* Alterações de funcionalidades
-
-Não garantimos disponibilidade contínua ou funcionamento livre de erros.
-
----
-
-# 8. Limitação de Responsabilidade
-
-O aplicativo é fornecido “como está” e “conforme disponível”.
-
-Na máxima extensão permitida pela legislação aplicável, o Bible Lexis não será responsável por:
-
-* Perdas indiretas
-* Danos incidentais
-* Perda de dados
-* Interrupções de serviço
-* Problemas decorrentes de terceiros
-* Falhas das plataformas Apple ou Google
-
----
-
-# 9. Privacidade
-
-O uso do aplicativo também está sujeito à Política de Privacidade do Bible Lexis.
-
-Recomendamos a leitura integral da Política de Privacidade.
-
----
-
-# 10. Alterações nos Termos
-
-Podemos atualizar estes Termos de Uso periodicamente.
-
-O uso contínuo do aplicativo após alterações representa aceitação dos novos Termos.
-
----
-
-# 11. Encerramento de Conta
-
-Reservamo-nos o direito de suspender ou encerrar contas que violem estes Termos ou utilizem o aplicativo de forma abusiva.
-
----
-
-# 12. Legislação Aplicável
-
-Estes Termos serão regidos pelas leis aplicáveis do país de operação do serviço.
-
----
-
-# 13. Contato
-
-Em caso de dúvidas sobre estes Termos de Uso, entre em contato:
-
-E-mail: [suporte@biblelexis.com](mailto:suporte@biblelexis.com)
-
----
-
-# 14. Consentimento
-
-Ao utilizar o aplicativo Bible Lexis, o usuário declara concordar com estes Termos de Uso.
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Termos de Uso – Bible Lexis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --parchment: #f7f3ec;
+      --ink: #1a1612;
+      --ink-light: #4a4540;
+      --gold: #8b6914;
+      --gold-light: #c49a2a;
+      --rule: #d4c9b0;
+      --section-bg: #f0ebe0;
+      --highlight: #e8dfc8;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background-color: var(--parchment);
+      color: var(--ink);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--ink);
+      padding: 48px 24px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, #3a2e1a 0%, var(--ink) 70%);
+    }
+    .header-ornament {
+      font-family: 'Crimson Pro', serif;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 16px;
+      opacity: 0.8;
+    }
+    .site-header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: clamp(28px, 5vw, 48px);
+      color: var(--parchment);
+      letter-spacing: 0.02em;
+      position: relative;
+      margin-bottom: 8px;
+    }
+    .site-header h1 em { color: var(--gold-light); font-style: italic; }
+    .header-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px auto 16px;
+      position: relative;
+    }
+    .header-rule::before,
+    .header-rule::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+    }
+    .header-rule::before { background: linear-gradient(90deg, transparent, var(--gold)); }
+    .header-rule::after  { background: linear-gradient(90deg, var(--gold), transparent); }
+    .diamond { width: 6px; height: 6px; background: var(--gold-light); transform: rotate(45deg); }
+    .header-date { font-size: 13px; color: rgba(247,243,236,0.45); position: relative; letter-spacing: 0.05em; }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--ink);
+      border-bottom: 1px solid #2e2820;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 4px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .toc a {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(247,243,236,0.5);
+      text-decoration: none;
+      padding: 13px 10px;
+      transition: color 0.2s;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap;
+    }
+    .toc a:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+    /* ── Layout ── */
+    .page-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ── Intro ── */
+    .intro {
+      margin: 48px 0 56px;
+      padding: 32px 36px;
+      background: var(--highlight);
+      border-left: 3px solid var(--gold);
+      font-family: 'Crimson Pro', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--ink-light);
+      line-height: 1.7;
+    }
+
+    /* ── Section ── */
+    .section { margin: 44px 0; }
+
+    .section h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      font-size: clamp(20px, 3vw, 26px);
+      color: var(--ink);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      line-height: 1.2;
+    }
+    .section h2 .num {
+      font-size: 11px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      background: var(--highlight);
+      padding: 3px 9px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section h3 {
+      font-family: 'Crimson Pro', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink-light);
+      margin: 20px 0 10px;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--ink-light);
+      margin-bottom: 14px;
+    }
+
+    /* ── Lists ── */
+    .section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 14px 0;
+    }
+    .section ul li {
+      font-size: 15px;
+      color: var(--ink-light);
+      padding: 11px 16px 11px 42px;
+      background: var(--section-bg);
+      border-radius: 4px;
+      position: relative;
+      line-height: 1.6;
+    }
+    .section ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 16px;
+      top: 13px;
+      font-size: 9px;
+      color: var(--gold);
+    }
+
+    /* ── Callout (assinaturas / cancelamento) ── */
+    .callout {
+      background: linear-gradient(135deg, #f0e8d0 0%, #e8dfc8 100%);
+      border: 1px solid var(--rule);
+      border-radius: 6px;
+      padding: 24px 28px;
+      margin: 20px 0;
+    }
+    .callout-title {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+    .callout .store-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .store-card {
+      background: rgba(255,255,255,0.65);
+      border-radius: 4px;
+      padding: 16px;
+      border-top: 2px solid var(--gold);
+    }
+    .store-card .store-name {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 6px;
+    }
+    .store-card p {
+      font-size: 14px !important;
+      color: var(--ink-light);
+      margin: 0 !important;
+    }
+
+    /* ── IP grid ── */
+    .ip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .ip-card {
+      background: var(--section-bg);
+      border-radius: 4px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: var(--ink-light);
+      border-left: 2px solid var(--gold);
+    }
+
+    /* ── Divider ── */
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 56px 0 0;
+    }
+    .chapter-divider::before,
+    .chapter-divider::after { content: ''; flex: 1; height: 1px; background: var(--rule); }
+    .chapter-divider-inner { display: flex; gap: 6px; align-items: center; }
+    .chapter-divider .d { width: 5px; height: 5px; background: var(--rule); transform: rotate(45deg); }
+    .chapter-divider .d.center { background: var(--gold); width: 7px; height: 7px; }
+
+    /* ── Contact ── */
+    .contact-block {
+      margin-top: 64px;
+      background: var(--ink);
+      border-radius: 6px;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, #3a2e1a 0%, var(--ink) 70%);
+    }
+    .contact-block * { position: relative; }
+    .contact-block h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: 30px;
+      color: var(--parchment);
+      margin-bottom: 12px;
+      border: none !important;
+      padding: 0 !important;
+      display: block !important;
+    }
+    .contact-block p { font-size: 14px; color: rgba(247,243,236,0.5); margin-bottom: 24px; }
+    .contact-link {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 0.1em;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .contact-link:hover { background: var(--gold); color: var(--ink); }
+
+    /* ── Footer ── */
+    .site-footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 12px;
+      color: #b0a898;
+      letter-spacing: 0.05em;
+      position: relative;
+      z-index: 1;
+    }
+
+    a { color: var(--gold); }
+    a:hover { color: var(--gold-light); }
+
+    @media (max-width: 600px) {
+      .toc a { padding: 11px 7px; font-size: 10px; }
+      .intro { padding: 24px 20px; font-size: 16px; }
+      .contact-block { padding: 32px 20px; }
+      .callout .store-grid { grid-template-columns: 1fr; }
+      .ip-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="header-ornament">Bible Lexis · Documentos Legais</div>
+    <h1>Termos de <em>Uso</em></h1>
+    <div class="header-rule"><div class="diamond"></div></div>
+    <div class="header-date">Última atualização: 07 de maio de 2026</div>
+  </header>
+
+  <nav class="toc">
+    <a href="#aceitacao">Aceitação</a>
+    <a href="#servico">Serviço</a>
+    <a href="#conta">Conta</a>
+    <a href="#assinaturas">Assinaturas</a>
+    <a href="#uso">Uso</a>
+    <a href="#ip">Propriedade</a>
+    <a href="#responsabilidade">Responsabilidade</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <div class="page-wrap">
+
+    <div class="intro">
+      Bem-vindo ao Bible Lexis. Estes Termos de Uso regulam o acesso e a utilização do aplicativo.
+      Ao utilizar o aplicativo, você concorda integralmente com os termos aqui descritos.
+    </div>
+
+    <!-- 1 -->
+    <div id="aceitacao" class="section">
+      <h2><span class="num">01</span> Aceitação dos Termos</h2>
+      <p>Ao acessar ou utilizar o aplicativo Bible Lexis, o usuário declara ter lido, compreendido e aceitado estes Termos de Uso.</p>
+      <p>Caso não concorde com qualquer parte destes Termos, o usuário não deverá utilizar o aplicativo.</p>
+    </div>
+
+    <!-- 2 -->
+    <div id="servico" class="section">
+      <h2><span class="num">02</span> Descrição do Serviço</h2>
+      <p>O Bible Lexis é um aplicativo que oferece funcionalidades relacionadas a conteúdos bíblicos, estudos, recursos premium e serviços por assinatura.</p>
+      <p>As funcionalidades podem ser alteradas, atualizadas ou removidas a qualquer momento, sem aviso prévio.</p>
+    </div>
+
+    <!-- 3 -->
+    <div id="conta" class="section">
+      <h2><span class="num">03</span> Conta do Usuário</h2>
+      <p>Algumas funcionalidades podem exigir autenticação ou criação de conta. O usuário é responsável por:</p>
+      <ul>
+        <li>Manter a confidencialidade de suas credenciais de acesso.</li>
+        <li>Garantir a segurança de sua conta.</li>
+        <li>Todas as atividades realizadas através de sua conta.</li>
+      </ul>
+      <p style="margin-top:14px;">O Bible Lexis não se responsabiliza por acessos não autorizados decorrentes de negligência do usuário.</p>
+    </div>
+
+    <!-- 4 -->
+    <div id="assinaturas" class="section">
+      <h2><span class="num">04</span> Assinaturas e Pagamentos</h2>
+      <p>O aplicativo pode oferecer recursos premium através de assinaturas recorrentes, processadas pela Apple App Store e/ou Google Play Store. Ao contratar uma assinatura, o usuário concorda que:</p>
+      <ul>
+        <li>O pagamento será cobrado automaticamente de acordo com o plano selecionado.</li>
+        <li>A assinatura será renovada automaticamente até o cancelamento.</li>
+        <li>O cancelamento deve ser realizado diretamente pela loja correspondente.</li>
+      </ul>
+
+      <div class="callout" style="margin-top:24px;">
+        <div class="callout-title">Como cancelar sua assinatura</div>
+        <div class="store-grid">
+          <div class="store-card">
+            <div class="store-name">Apple App Store</div>
+            <p>Configurações da conta Apple ID → Assinaturas</p>
+          </div>
+          <div class="store-card">
+            <div class="store-name">Google Play Store</div>
+            <p>Conta Google Play → Pagamentos e Assinaturas</p>
+          </div>
+        </div>
+        <p style="font-size:13px; color:var(--ink-light); margin-top:14px;">O cancelamento impede futuras cobranças, mas não gera reembolso automático de valores já pagos.</p>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div id="uso" class="section">
+      <h2><span class="num">05</span> Uso Permitido</h2>
+      <p>O usuário concorda em utilizar o aplicativo apenas para fins legais. É proibido:</p>
+      <ul>
+        <li>Utilizar o aplicativo para atividades ilegais.</li>
+        <li>Tentar acessar sistemas ou dados sem autorização.</li>
+        <li>Realizar engenharia reversa do aplicativo.</li>
+        <li>Distribuir versões modificadas do aplicativo.</li>
+        <li>Utilizar o serviço de forma abusiva ou que prejudique outros usuários.</li>
+      </ul>
+    </div>
+
+    <!-- 6 -->
+    <div id="ip" class="section">
+      <h2><span class="num">06</span> Propriedade Intelectual</h2>
+      <p>Todos os direitos relacionados ao Bible Lexis pertencem aos seus respectivos proprietários e são protegidos pela legislação aplicável. Isso inclui:</p>
+      <div class="ip-grid">
+        <div class="ip-card">Código-fonte</div>
+        <div class="ip-card">Interface</div>
+        <div class="ip-card">Design</div>
+        <div class="ip-card">Marca</div>
+        <div class="ip-card">Conteúdo exclusivo</div>
+        <div class="ip-card">Recursos visuais</div>
+      </div>
+      <p style="margin-top:16px;">Nenhum direito é transferido ao usuário além da licença limitada de uso do aplicativo.</p>
+    </div>
+
+    <!-- 7 -->
+    <div class="section">
+      <h2><span class="num">07</span> Disponibilidade do Serviço</h2>
+      <p>O Bible Lexis poderá passar por atualizações, manutenções, interrupções temporárias e alterações de funcionalidades. Não garantimos disponibilidade contínua ou funcionamento livre de erros.</p>
+    </div>
+
+    <!-- 8 -->
+    <div id="responsabilidade" class="section">
+      <h2><span class="num">08</span> Limitação de Responsabilidade</h2>
+      <p>O aplicativo é fornecido "como está" e "conforme disponível". Na máxima extensão permitida pela legislação, o Bible Lexis não será responsável por:</p>
+      <ul>
+        <li>Perdas indiretas ou danos incidentais.</li>
+        <li>Perda de dados ou interrupções de serviço.</li>
+        <li>Problemas decorrentes de terceiros.</li>
+        <li>Falhas das plataformas Apple ou Google.</li>
+      </ul>
+    </div>
+
+    <!-- 9 -->
+    <div class="section">
+      <h2><span class="num">09</span> Privacidade</h2>
+      <p>O uso do aplicativo também está sujeito à <a href="bible_lexis_privacy.html">Política de Privacidade do Bible Lexis</a>. Recomendamos a leitura integral antes de utilizar o aplicativo.</p>
+    </div>
+
+    <!-- 10 -->
+    <div class="section">
+      <h2><span class="num">10</span> Alterações nos Termos</h2>
+      <p>Podemos atualizar estes Termos de Uso periodicamente. O uso contínuo do aplicativo após alterações representa aceitação dos novos Termos.</p>
+    </div>
+
+    <!-- 11 -->
+    <div class="section">
+      <h2><span class="num">11</span> Encerramento de Conta</h2>
+      <p>Reservamo-nos o direito de suspender ou encerrar contas que violem estes Termos ou utilizem o aplicativo de forma abusiva.</p>
+    </div>
+
+    <!-- 12 -->
+    <div class="section">
+      <h2><span class="num">12</span> Legislação Aplicável</h2>
+      <p>Estes Termos serão regidos pelas leis aplicáveis do Brasil.</p>
+    </div>
+
+    <!-- 13 -->
+    <div class="section">
+      <h2><span class="num">13</span> Consentimento</h2>
+      <p>Ao utilizar o aplicativo Bible Lexis, o usuário declara concordar com estes Termos de Uso em sua totalidade.</p>
+    </div>
+
+    <div class="chapter-divider">
+      <div class="chapter-divider-inner">
+        <div class="d"></div><div class="d center"></div><div class="d"></div>
+      </div>
+    </div>
+
+    <!-- Contato -->
+    <div id="contato" class="contact-block">
+      <div class="header-ornament">Dúvidas sobre os Termos</div>
+      <h2>Entre em contato</h2>
+      <p>Estamos à disposição para esclarecer qualquer questão sobre estes Termos de Uso.</p>
+      <a href="mailto:suporte@biblelexis.com" class="contact-link">suporte@biblelexis.com</a>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    © 2026 Bible Lexis · Todos os direitos reservados
+  </footer>
+
+</body>
+</html>
