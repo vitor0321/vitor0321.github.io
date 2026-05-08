@@ -3,6 +3,6 @@
 * https://vitor0321.github.io/app-ads.txt
 * https://vitor0321.github.io/flickly-privacy-policy.txt
 
-* https://vitor0321.github.io/lexis-privacy-policy.txt
+* https://vitor0321.github.io/lexis-privacy-policy.html
 
-* https://vitor0321.github.io/terms-of-use.txt
+* https://vitor0321.github.io/terms-of-use.html
