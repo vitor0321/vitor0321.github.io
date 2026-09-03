@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join Play Privacy Policy and Terms of Service" />
+  <title>Privacy Policy &amp; Terms of Service – Join Play</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #071A2D;
+      --navy-2: #0B2A4A;
+      --blue: #1677FF;
+      --blue-light: #4DA3FF;
+      --bg: #F5F8FC;
+      --surface: #EAF1F9;
+      --surface-2: #DFEAF6;
+      --text: #101828;
+      --text-light: #475467;
+      --muted: #667085;
+      --rule: #D0DCE8;
+      --white: #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .site-header {
+      background: var(--navy);
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(22,119,255,.30) 0%, rgba(7,26,45,0) 62%),
+        linear-gradient(135deg, rgba(77,163,255,.06), transparent 55%);
+    }
+
+    .header-ornament {
+      font-family: 'Crimson Pro', serif;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--blue-light);
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    .site-header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: clamp(30px, 5vw, 50px);
+      color: var(--white);
+      letter-spacing: 0.02em;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .site-header h1 em {
+      color: var(--blue-light);
+      font-style: italic;
+    }
+
+    .header-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px auto 16px;
+      position: relative;
+    }
+
+    .header-rule::before,
+    .header-rule::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue));
+    }
+
+    .header-rule::after {
+      background: linear-gradient(90deg, var(--blue), transparent);
+    }
+
+    .diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--blue-light);
+      transform: rotate(45deg);
+    }
+
+    .header-date {
+      font-size: 13px;
+      color: rgba(255,255,255,.52);
+      position: relative;
+      letter-spacing: 0.05em;
+    }
+
+    .toc {
+      background: var(--navy);
+      border-bottom: 1px solid #173451;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .toc a {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      text-decoration: none;
+      padding: 14px 12px;
+      transition: color .2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .toc a:hover {
+      color: var(--blue-light);
+      border-bottom-color: var(--blue);
+    }
+
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      margin: 48px 0 56px;
+      padding: 32px 36px;
+      background: var(--surface);
+      border-left: 3px solid var(--blue);
+      font-family: 'Crimson Pro', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .chapter {
+      margin-top: 64px;
+      margin-bottom: 32px;
+    }
+
+    .chapter-label {
+      font-size: 10px;
+      letter-spacing: .4em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .chapter h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      font-size: clamp(27px, 4vw, 39px);
+      color: var(--text);
+      line-height: 1.15;
+    }
+
+    .chapter-rule {
+      margin-top: 16px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--blue) 0%, var(--rule) 60%, transparent 100%);
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .section h3 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      font-size: 21px;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h3 .num {
+      font-size: 11px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: .15em;
+      color: var(--blue);
+      background: var(--surface);
+      padding: 2px 8px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: var(--text-light);
+      padding: 13px 16px 13px 44px;
+      background: var(--surface);
+      border-radius: 5px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .section ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 16px;
+      top: 14px;
+      font-size: 9px;
+      color: var(--blue);
+    }
+
+    .section ul li strong {
+      color: var(--text);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    .callout {
+      background: linear-gradient(135deg, #E7F1FF 0%, #DCEBFA 100%);
+      border: 1px solid #C7DCF5;
+      border-radius: 7px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+
+    .callout-title {
+      font-size: 11px;
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--blue);
+      font-weight: 600;
+      margin-bottom: 14px;
+    }
+
+    .callout ul { gap: 8px !important; }
+
+    .callout ul li { background: rgba(255,255,255,.72) !important; }
+
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .right-card {
+      background: var(--surface);
+      border-radius: 5px;
+      padding: 16px;
+      border-top: 2px solid var(--blue);
+      font-size: 14px;
+      color: var(--text-light);
+    }
+
+    .chapter-divider {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 72px 0 0;
+    }
+
+    .chapter-divider::before,
+    .chapter-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--rule);
+    }
+
+    .chapter-divider-inner {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .chapter-divider .d {
+      width: 5px;
+      height: 5px;
+      background: var(--rule);
+      transform: rotate(45deg);
+    }
+
+    .chapter-divider .d.center {
+      background: var(--blue);
+      width: 7px;
+      height: 7px;
+    }
+
+    .contact-block {
+      margin-top: 64px;
+      background: var(--navy);
+      border-radius: 7px;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(22,119,255,.25) 0%, rgba(7,26,45,0) 70%);
+    }
+
+    .contact-block * { position: relative; }
+
+    .contact-block .header-ornament { margin-bottom: 12px; }
+
+    .contact-block h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: 31px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .contact-block p {
+      font-size: 14px;
+      color: rgba(255,255,255,.56);
+      margin-bottom: 24px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid var(--blue);
+      color: var(--blue-light);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: .1em;
+      border-radius: 3px;
+      transition: all .2s;
+    }
+
+    .contact-link:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .05em;
+      position: relative;
+      z-index: 1;
+    }
+
+    a { color: var(--blue); }
+    a:hover { color: #0059D6; }
+
+    @media (max-width: 600px) {
+      .toc { gap: 0; }
+      .toc a { padding: 12px 8px; font-size: 10px; }
+      .intro { padding: 24px 20px; font-size: 16px; }
+      .contact-block { padding: 32px 20px; }
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-ornament">Join Play · Legal Documents</div>
+  <h1>Privacy &amp; <em>Terms of Service</em></h1>
+  <div class="header-rule"><div class="diamond"></div></div>
+  <div class="header-date">Last updated: September 3, 2026</div>
+</header>
+
+<nav class="toc">
+  <a href="#privacy">Privacy</a>
+  <a href="#collection">Collection</a>
+  <a href="#payments">Payments</a>
+  <a href="#sharing">Sharing</a>
+  <a href="#rights">Your Rights</a>
+  <a href="#terms">Terms</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="intro">
+    Join Play connects players with organizers of sports matches and activities.
+    This document explains how we collect, use, share, and protect personal information
+    and establishes the rules that apply when players and organizers use the platform.
+  </div>
+
+  <div id="privacy" class="chapter">
+    <span class="chapter-label">Part I</span>
+    <h2>Privacy Policy</h2>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div id="collection" class="section">
+    <h3><span class="num">01</span> Information We Collect</h3>
+    <p>Depending on how you use Join Play, we may collect the following categories of information:</p>
+    <ul>
+      <li><strong>Account information</strong>Name, email address, phone number, authentication identifiers, password-related information handled by our authentication provider, and account status.</li>
+      <li><strong>Profile information</strong>Profile photo, preferred sports, player information, organizer information, and other details you choose to provide.</li>
+      <li><strong>Match information</strong>Sports, match dates and times, locations, capacity, participation status, invitations, attendance, cancellations, and match history.</li>
+      <li><strong>Transaction information</strong>Information related to registrations, fees, platform charges, refunds, payment status, and transaction identifiers. We do not intentionally store complete payment card numbers when payment processing is handled by a third-party payment provider.</li>
+      <li><strong>Organizer information</strong>Information required to create and manage matches and, where applicable, receive payouts, including information required by payment providers for verification and settlement.</li>
+      <li><strong>Communications</strong>Messages, support requests, reports, reviews, and other information you send to Join Play or make available through platform features.</li>
+      <li><strong>Device and technical information</strong>Device model, operating system, app version, language, IP address, diagnostic information, crash information, and identifiers reasonably necessary to operate and secure the service.</li>
+      <li><strong>Usage information</strong>Interactions with the application, screens or features used, preferences, and other activity information used to understand and improve the service.</li>
+      <li><strong>Location information</strong>If location functionality is enabled, we may process location information to provide location-based discovery or related features. You can control device permissions through your operating system.</li>
+    </ul>
+  </div>
+
+  <div id="use" class="section">
+    <h3><span class="num">02</span> How We Use Your Information</h3>
+    <ul>
+      <li><strong>Operate Join Play</strong>Create and manage accounts, display matches, process registrations, maintain match history, and provide platform functionality.</li>
+      <li><strong>Connect players and organizers</strong>Allow organizers to manage participants and allow players to receive information necessary to participate in matches.</li>
+      <li><strong>Process transactions</strong>Facilitate registration payments, calculate applicable platform fees, track payment status, support refunds, and facilitate organizer payouts through payment providers.</li>
+      <li><strong>Communicate with you</strong>Send transactional notifications about registrations, matches, payments, cancellations, account activity, security, and service changes.</li>
+      <li><strong>Improve the service</strong>Analyze usage, troubleshoot technical problems, improve performance, and develop new features.</li>
+      <li><strong>Protect Join Play</strong>Detect and prevent fraud, abuse, unauthorized access, payment disputes, and other harmful or illegal activity.</li>
+      <li><strong>Meet legal obligations</strong>Comply with applicable laws, regulations, court orders, tax requirements, accounting obligations, and lawful requests from authorities.</li>
+    </ul>
+  </div>
+
+  <div id="payments" class="section">
+    <h3><span class="num">03</span> Payments &amp; Financial Transactions</h3>
+    <p>Join Play may facilitate payments made by players to participate in matches organized by third parties. The amount presented to the player may include the participation amount established by the organizer and a Join Play platform usage fee.</p>
+
+    <div class="callout">
+      <div class="callout-title">How the transaction works</div>
+      <ul>
+        <li><strong>Player payment</strong>The player authorizes payment for a match according to the amount displayed before registration is completed.</li>
+        <li><strong>Platform fee</strong>Join Play may charge a platform usage fee. Any applicable fee should be presented before the player confirms the transaction.</li>
+        <li><strong>Organizer amount</strong>The organizer is entitled to the amount applicable to the match after deduction of platform fees and other applicable charges.</li>
+        <li><strong>Payment provider</strong>Payments and payouts may be processed by specialized third-party payment providers. Those providers may collect additional information required to process or verify transactions.</li>
+        <li><strong>Payment disputes</strong>Join Play may investigate payment disputes, chargebacks, suspected fraud, or other transaction irregularities and may temporarily restrict transactions or accounts when reasonably necessary.</li>
+      </ul>
+    </div>
+
+    <p>Join Play is not a bank or financial institution unless expressly stated otherwise. Payment services are provided or supported by third-party payment providers according to their own terms and policies.</p>
+  </div>
+
+  <div id="sharing" class="section">
+    <h3><span class="num">04</span> Information Sharing</h3>
+    <p>We do not sell or rent personal information. Information may be shared when reasonably necessary to operate Join Play, complete a transaction, provide a requested feature, or comply with law.</p>
+    <ul>
+      <li><strong>With organizers</strong>Information reasonably necessary to identify and manage players registered for their matches, such as name, profile information, participation status, and relevant match information.</li>
+      <li><strong>With players</strong>Limited profile or match information may be visible to other participants when required for match organization and platform functionality.</li>
+      <li><strong>Payment providers</strong>Transaction and identity information required to process payments, refunds, fraud checks, and organizer payouts.</li>
+      <li><strong>Technology providers</strong>Infrastructure, authentication, databases, analytics, crash reporting, notifications, customer support, security, and other providers that process information on our behalf.</li>
+      <li><strong>Legal authorities</strong>When disclosure is required or permitted by applicable law, legal process, or a legitimate request from an authorized authority.</li>
+      <li><strong>Business transactions</strong>In connection with a merger, acquisition, financing, restructuring, sale of assets, or similar corporate transaction, subject to applicable privacy requirements.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">05</span> Visibility of Profile &amp; Match Information</h3>
+    <p>Join Play is designed around interaction between players and organizers. As a result, some information may be visible to other users when you participate in platform activities.</p>
+    <ul>
+      <li><strong>Player visibility</strong>Your name, profile information, participation status, and other information may be visible to an organizer or to participants of a match when necessary to organize the activity.</li>
+      <li><strong>Organizer visibility</strong>Organizers may have access to information about players registered for matches they create or manage.</li>
+      <li><strong>Private account data</strong>Authentication credentials, payment credentials handled by payment providers, and information not required for platform interaction are not intentionally exposed to other users.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">06</span> Storage, Security &amp; Retention</h3>
+    <p>We use reasonable technical and organizational measures designed to protect personal information against unauthorized access, alteration, disclosure, loss, or destruction. No internet-based service can guarantee absolute security.</p>
+    <p>We retain information for as long as reasonably necessary to provide the service, maintain transaction and accounting records, resolve disputes, prevent fraud, enforce agreements, comply with legal obligations, or protect legitimate business interests. Retention periods may vary depending on the type of information and the applicable legal requirements.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">07</span> Third-Party Services</h3>
+    <p>Join Play may rely on third-party services such as authentication, cloud infrastructure, databases, analytics, push notifications, crash reporting, payment processing, fraud prevention, and customer support. These providers may process information according to their own terms and privacy policies.</p>
+    <p>We may use services provided by companies such as Google/Firebase and payment processors selected for the Join Play platform. The specific providers used may change as the service evolves.</p>
+  </div>
+
+  <div id="rights" class="section">
+    <h3><span class="num">08</span> Your Rights — LGPD &amp; Other Laws</h3>
+    <p>Where applicable, including under Brazil's Lei Geral de Proteção de Dados Pessoais (LGPD), you may have rights concerning your personal data. The applicable rights and procedures depend on your jurisdiction and the legal basis for processing.</p>
+    <div class="rights-grid">
+      <div class="right-card">Confirm whether we process your personal data.</div>
+      <div class="right-card">Request access to personal data we hold about you.</div>
+      <div class="right-card">Request correction of incomplete, inaccurate, or outdated information.</div>
+      <div class="right-card">Request deletion, anonymization, or blocking when legally applicable.</div>
+      <div class="right-card">Request portability where provided by applicable law.</div>
+      <div class="right-card">Request information about relevant data sharing.</div>
+      <div class="right-card">Withdraw consent when processing is based on consent.</div>
+      <div class="right-card">Object to or request restriction of certain processing where legally applicable.</div>
+    </div>
+    <p style="margin-top:18px;">Requests can be submitted using the contact information at the end of this document. We may need to verify your identity before fulfilling certain requests.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">09</span> Cookies &amp; Similar Technologies</h3>
+    <p>Web pages associated with Join Play may use cookies or similar technologies to maintain sessions, remember preferences, improve performance, provide security, and understand aggregated usage. The availability and purpose of these technologies may vary depending on the platform or service you access.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">10</span> Children's Privacy</h3>
+    <p>Join Play is not intended for children under 13. Where local law establishes a higher minimum age or requires parental or guardian authorization, those requirements apply. If we learn that personal information was collected from a child in violation of applicable law, we will take reasonable steps to address the situation.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">11</span> Changes to This Privacy Policy</h3>
+    <p>We may update this Privacy Policy when our practices, features, service providers, or legal obligations change. Significant changes may be communicated through the application, website, or other reasonable means. The effective date at the top of this document indicates the latest update.</p>
+  </div>
+
+  <div class="chapter-divider">
+    <div class="chapter-divider-inner">
+      <div class="d"></div>
+      <div class="d center"></div>
+      <div class="d"></div>
+    </div>
+  </div>
+
+  <div id="terms" class="chapter">
+    <span class="chapter-label">Part II</span>
+    <h2>Terms of Service</h2>
+    <div class="chapter-rule"></div>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">01</span> Acceptance of Terms</h3>
+    <p>By downloading, accessing, or using Join Play, you confirm that you have read, understood, and agree to these Terms of Service and the Privacy Policy. If you do not agree, you must discontinue use of the service.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">02</span> About Join Play</h3>
+    <p>Join Play is a platform designed to connect players with organizers of sports matches and activities. Depending on the available features, players may discover matches, register for participation, make payments, and manage their activity history. Organizers may create and manage matches, participants, fees, and related information.</p>
+    <p>Join Play provides the technology and platform for these interactions. Unless Join Play expressly states otherwise, Join Play is not the organizer, owner, coach, referee, venue operator, or provider of the underlying sporting activity.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">03</span> Eligibility &amp; Accounts</h3>
+    <p>You must meet the minimum age required by applicable law and by Join Play to create and use an account. You are responsible for providing accurate information and keeping your account credentials secure.</p>
+    <ul>
+      <li>Do not create an account using another person's identity.</li>
+      <li>Do not provide false or misleading information.</li>
+      <li>Notify us if you suspect unauthorized access to your account.</li>
+      <li>You are responsible for activity performed through your account, except where unauthorized use results from circumstances for which you are not responsible.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">04</span> Players — Joining Matches</h3>
+    <p>Players may use Join Play to find available matches and register for participation. Before completing a registration, the player is responsible for reviewing the match information, including sport, date, time, location, available spaces, organizer information where provided, and the total amount payable.</p>
+    <p>A registration may become binding once payment is successfully authorized or otherwise confirmed by Join Play, subject to the cancellation and refund rules applicable to the match.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">05</span> Organizers — Creating Matches</h3>
+    <p>Organizers are responsible for the accuracy and legality of the matches they create and for the quality and safety of the sporting activity they organize.</p>
+    <ul>
+      <li>Provide accurate sport, date, time, location, capacity, price, and participation information.</li>
+      <li>Only create matches or activities you are authorized to organize.</li>
+      <li>Honor confirmed registrations unless a legitimate cancellation or exceptional circumstance applies.</li>
+      <li>Maintain safe and appropriate conditions for the activity and comply with applicable local rules.</li>
+      <li>Use participant information only for legitimate purposes related to the match and applicable law.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">06</span> Payments, Platform Fees &amp; Payouts</h3>
+    <p>Join Play may charge a platform usage fee in connection with a paid registration. The applicable amount should be disclosed to the player before confirmation of payment.</p>
+    <div class="callout">
+      <div class="callout-title">Financial terms</div>
+      <ul>
+        <li><strong>Match price</strong>The organizer generally determines the amount charged for participation, subject to the platform's rules and applicable law.</li>
+        <li><strong>Join Play fee</strong>Join Play may retain a usage or service fee from a transaction. The fee structure may vary by match, organizer, market, or service.</li>
+        <li><strong>Organizer payout</strong>Amounts due to organizers may be paid through a third-party payment provider after applicable deductions, verification, reserves, disputes, refunds, or other adjustments.</li>
+        <li><strong>Verification</strong>Payment providers may require identity, tax, bank-account, or other information before processing payouts.</li>
+        <li><strong>Taxes</strong>Each party is responsible for its own taxes and legal obligations arising from amounts it receives or pays, except where Join Play is legally required to collect, withhold, or report amounts.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">07</span> Cancellations &amp; Refunds</h3>
+    <p>Cancellation and refund rules may vary according to the match, organizer, payment provider, applicable law, and the timing of the cancellation.</p>
+    <ul>
+      <li><strong>Player cancellation</strong>A player may request cancellation according to the cancellation policy presented for the relevant match.</li>
+      <li><strong>Organizer cancellation</strong>If an organizer cancels a match, Join Play may facilitate a refund to affected players according to the applicable policy and payment provider procedures.</li>
+      <li><strong>Match changes</strong>If a material change occurs, such as a significant change of date, time, or location, available remedies may depend on the circumstances and applicable law.</li>
+      <li><strong>No-show</strong>A player's failure to attend may not automatically entitle the player to a refund unless the applicable cancellation policy or law provides otherwise.</li>
+      <li><strong>Refund timing</strong>Approved refunds may require additional processing time depending on the payment provider and financial institution.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">08</span> Ratings, Reviews &amp; Content</h3>
+    <p>Where available, Join Play may allow users to rate or review matches, organizers, or other aspects of the platform. Content must be truthful, relevant, lawful, and respectful.</p>
+    <p>You grant Join Play a non-exclusive, worldwide, royalty-free license to host, reproduce, display, and use content you submit as necessary to operate, promote, secure, and improve the service, subject to applicable law and our Privacy Policy.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">09</span> Prohibited Activities</h3>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use Join Play for illegal, fraudulent, deceptive, or abusive activities.</li>
+      <li>Use another person's account or impersonate another person or organization.</li>
+      <li>Manipulate registrations, payments, ratings, reviews, availability, or platform metrics.</li>
+      <li>Attempt to bypass platform fees or payment mechanisms through unauthorized means.</li>
+      <li>Collect, scrape, sell, or misuse personal information belonging to other users.</li>
+      <li>Harass, threaten, discriminate against, or endanger other users.</li>
+      <li>Upload malware or attempt to compromise Join Play's systems.</li>
+      <li>Reverse-engineer, decompile, modify, or exploit the application except where expressly permitted by applicable law.</li>
+      <li>Use the platform in a way that interferes with its availability, security, or integrity.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">10</span> Sports Activities &amp; Organizer Responsibility</h3>
+    <p>Sports activities involve inherent risks. Players are responsible for deciding whether they are physically and otherwise able to participate and should follow appropriate safety practices.</p>
+    <p>Organizers are responsible for the activities they organize, including venue arrangements, participant management, applicable permits or authorizations, safety procedures, and compliance with applicable laws. Join Play does not guarantee the skill, conduct, fitness, or safety of any player or organizer.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">11</span> Intellectual Property</h3>
+    <p>Join Play's software, branding, design, interfaces, logos, text, graphics, and technology are protected by applicable intellectual property laws. Except as expressly permitted, you may not copy, reproduce, distribute, modify, reverse-engineer, or commercially exploit Join Play or its proprietary materials without authorization.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">12</span> Suspension &amp; Termination</h3>
+    <p>We may suspend, restrict, or terminate access to an account or feature when reasonably necessary to enforce these Terms, protect users, investigate fraud or abuse, comply with law, or protect the security and integrity of Join Play.</p>
+    <p>Where appropriate, we may provide notice and an opportunity to resolve the issue. Termination does not automatically cancel obligations that by their nature should survive termination, including payment obligations, dispute provisions, intellectual property provisions, and applicable legal obligations.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">13</span> Availability &amp; Changes to the Service</h3>
+    <p>Join Play may change, suspend, or discontinue features from time to time for maintenance, security, legal, technical, or business reasons. We do not guarantee uninterrupted or error-free availability of the service.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">14</span> Disclaimer</h3>
+    <p>To the maximum extent permitted by applicable law, Join Play is provided on an “as is” and “as available” basis. We do not guarantee that every match will occur as announced, that an organizer or player will behave as expected, or that the service will always be free from interruptions or errors.</p>
+    <p>Nothing in these Terms is intended to exclude or limit rights that cannot legally be excluded or limited under applicable consumer or other mandatory laws.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">15</span> Limitation of Liability</h3>
+    <p>To the fullest extent permitted by applicable law, Join Play will not be responsible for indirect, incidental, special, consequential, or punitive damages arising from use of the service, including losses resulting from interactions between users, cancellations by third parties, sporting activities, or events outside our reasonable control.</p>
+    <p>Where liability cannot legally be excluded, it will be limited to the maximum extent permitted by applicable law.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">16</span> Governing Law &amp; Jurisdiction</h3>
+    <p>These Terms are governed by the laws of the Federative Republic of Brazil, without prejudice to mandatory consumer-protection or other rights that may apply to you under the laws of your place of residence.</p>
+    <p>Any dispute should first be addressed through the contact channel below so that the parties can attempt to resolve it amicably. Where judicial resolution is necessary, the competent courts will be determined in accordance with applicable law.</p>
+  </div>
+
+  <div class="section">
+    <h3><span class="num">17</span> Changes to These Terms</h3>
+    <p>We may update these Terms to reflect changes to Join Play, our business model, legal requirements, or platform features. When appropriate, significant changes will be communicated through the application or other reasonable means. Continued use after the effective date constitutes acceptance of the updated Terms to the extent permitted by law.</p>
+  </div>
+
+  <div id="contact" class="contact-block">
+    <div class="header-ornament">Questions or requests</div>
+    <h2>Get in touch</h2>
+    <p>For privacy requests, account questions, payment-related support, or questions about these Terms, please contact Join Play.</p>
+    <a href="mailto:vitor0321@gmail.com" class="contact-link">vitor0321@gmail.com</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  &copy; 2026 Join Play &middot; All rights reserved
+</footer>
+
+</body>
+</html>
