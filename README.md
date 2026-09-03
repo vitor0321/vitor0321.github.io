@@ -5,4 +5,6 @@
 
 * https://vitor0321.github.io/lexis-privacy-policy.html
 
+** https://vitor0321.github.io/join-play-privacy-policy.html 
+
 * https://vitor0321.github.io/terms-of-use.html
