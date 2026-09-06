@@ -4,6 +4,7 @@
 * https://vitor0321.github.io/flickly-privacy-policy.txt
 
 * https://vitor0321.github.io/lexis-privacy-policy.html
+* https://vitor0321.github.io/lexis-support.html
 
 * https://vitor0321.github.io/join-play-privacy-policy.html 
 
