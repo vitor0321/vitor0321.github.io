@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Join Play Support" />
+  <title>Support – Join Play</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #071A2D;
+      --navy-2: #0B2A4A;
+      --blue: #1677FF;
+      --blue-light: #4DA3FF;
+      --bg: #F5F8FC;
+      --surface: #EAF1F9;
+      --surface-2: #DFEAF6;
+      --text: #101828;
+      --text-light: #475467;
+      --muted: #667085;
+      --rule: #D0DCE8;
+      --white: #FFFFFF;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23noise)' opacity='0.025'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .site-header {
+      background: var(--navy);
+      padding: 52px 24px 44px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(22,119,255,.30) 0%, rgba(7,26,45,0) 62%),
+        linear-gradient(135deg, rgba(77,163,255,.06), transparent 55%);
+    }
+
+    .header-ornament {
+      font-family: 'Crimson Pro', serif;
+      font-size: 11px;
+      letter-spacing: 0.35em;
+      color: var(--blue-light);
+      text-transform: uppercase;
+      position: relative;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    .site-header h1 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: clamp(30px, 5vw, 50px);
+      color: var(--white);
+      letter-spacing: 0.02em;
+      position: relative;
+      margin-bottom: 8px;
+    }
+
+    .site-header h1 em {
+      color: var(--blue-light);
+      font-style: italic;
+    }
+
+    .header-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 20px auto 16px;
+      position: relative;
+    }
+
+    .header-rule::before,
+    .header-rule::after {
+      content: '';
+      flex: 1;
+      max-width: 80px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--blue));
+    }
+
+    .header-rule::after {
+      background: linear-gradient(90deg, var(--blue), transparent);
+    }
+
+    .diamond {
+      width: 6px;
+      height: 6px;
+      background: var(--blue-light);
+      transform: rotate(45deg);
+    }
+
+    .header-date {
+      font-size: 13px;
+      color: rgba(255,255,255,.52);
+      position: relative;
+      letter-spacing: 0.05em;
+    }
+
+    .toc {
+      background: var(--navy);
+      border-bottom: 1px solid #173451;
+      padding: 0 24px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .toc a {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.55);
+      text-decoration: none;
+      padding: 14px 12px;
+      transition: color .2s;
+      border-bottom: 2px solid transparent;
+    }
+
+    .toc a:hover {
+      color: var(--blue-light);
+      border-bottom-color: var(--blue);
+    }
+
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      margin: 48px 0 56px;
+      padding: 32px 36px;
+      background: var(--surface);
+      border-left: 3px solid var(--blue);
+      font-family: 'Crimson Pro', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-light);
+      line-height: 1.7;
+    }
+
+    .section {
+      margin: 40px 0;
+    }
+
+    .section h3 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 600;
+      font-size: 21px;
+      color: var(--text);
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h3 .num {
+      font-size: 11px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: .15em;
+      color: var(--blue);
+      background: var(--surface);
+      padding: 2px 8px;
+      border-radius: 3px;
+      flex-shrink: 0;
+    }
+
+    .section p {
+      font-size: 15px;
+      color: var(--text-light);
+      margin-bottom: 14px;
+    }
+
+    .section ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section ul li {
+      font-size: 15px;
+      color: var(--text-light);
+      padding: 13px 16px 13px 44px;
+      background: var(--surface);
+      border-radius: 5px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .section ul li::before {
+      content: '✦';
+      position: absolute;
+      left: 16px;
+      top: 14px;
+      font-size: 9px;
+      color: var(--blue);
+    }
+
+    .section ul li strong {
+      color: var(--text);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 2px;
+      font-size: 14px;
+    }
+
+    .contact-block {
+      margin-top: 24px;
+      background: var(--navy);
+      border-radius: 7px;
+      padding: 40px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-block::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(22,119,255,.25) 0%, rgba(7,26,45,0) 70%);
+    }
+
+    .contact-block * { position: relative; }
+
+    .contact-block .header-ornament { margin-bottom: 12px; }
+
+    .contact-block h2 {
+      font-family: 'Crimson Pro', serif;
+      font-weight: 300;
+      font-size: 31px;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .contact-block p {
+      font-size: 14px;
+      color: rgba(255,255,255,.56);
+      margin-bottom: 24px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      padding: 12px 32px;
+      border: 1px solid var(--blue);
+      color: var(--blue-light);
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: .1em;
+      border-radius: 3px;
+      transition: all .2s;
+    }
+
+    .contact-link:hover {
+      background: var(--blue);
+      color: var(--white);
+    }
+
+    .site-footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--rule);
+      font-size: 12px;
+      color: var(--muted);
+      letter-spacing: .05em;
+      position: relative;
+      z-index: 1;
+    }
+
+    a { color: var(--blue); }
+    a:hover { color: #0059D6; }
+
+    @media (max-width: 600px) {
+      .toc { gap: 0; }
+      .toc a { padding: 12px 8px; font-size: 10px; }
+      .intro { padding: 24px 20px; font-size: 16px; }
+      .contact-block { padding: 32px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-ornament">Join Play · Help Center</div>
+  <h1>Support &amp; <em>Help Center</em></h1>
+  <div class="header-rule"><div class="diamond"></div></div>
+  <div class="header-date">We usually reply within 2 business days</div>
+</header>
+
+<nav class="toc">
+  <a href="#faq">FAQ</a>
+  <a href="#account">Account &amp; Data</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<div class="page-wrap">
+
+  <div class="intro">
+    Need help with Join Play? This page covers the most common questions about matches,
+    payments, and your account. If you can't find what you're looking for, reach out
+    directly — we're happy to help.
+  </div>
+
+  <div id="faq" class="section">
+    <h3><span class="num">01</span> Frequently Asked Questions</h3>
+    <ul>
+      <li><strong>How do I create a match?</strong>Open the Create tab, choose a sport, venue, date, time, and the number of open spots, then publish it. Nearby players will be able to find and join.</li>
+      <li><strong>How do I join a match?</strong>Browse matches on the Home tab or the map, or search for a specific sport, date, or price. Tap a match to see details and join with a single tap.</li>
+      <li><strong>How do I cancel my spot in a match?</strong>Open the match from "My Matches" and use the leave/cancel option. Your spot is released for the next player in line.</li>
+      <li><strong>How do I cancel a match I organized?</strong>Open the match details and use "Cancel match". Players who joined are notified automatically.</li>
+      <li><strong>I found a bug or something isn't working.</strong>Please email us with your device model, a screenshot if possible, and the steps that led to the issue.</li>
+    </ul>
+  </div>
+
+  <div id="account" class="section">
+    <h3><span class="num">02</span> Account &amp; Data</h3>
+    <ul>
+      <li><strong>How do I update my profile or favorite sports?</strong>Go to the Profile tab to update your photo, availability, and the sports you play.</li>
+      <li><strong>How do I delete my account and personal data?</strong>Email us from the address linked to your account requesting account deletion. We'll confirm and remove your personal data in accordance with our Privacy Policy.</li>
+      <li><strong>Where can I read the Privacy Policy and Terms of Service?</strong>Available at <a href="https://vitor0321.github.io/join-play-privacy-policy.html">vitor0321.github.io/join-play-privacy-policy.html</a>.</li>
+    </ul>
+  </div>
+
+  <div id="contact" class="contact-block">
+    <div class="header-ornament">Still need help?</div>
+    <h2>Get in touch</h2>
+    <p>For anything not covered above — bugs, payments, account requests, or feedback — email us directly.</p>
+    <a href="mailto:vitorwalcker.dev@gmail.com" class="contact-link">vitorwalcker.dev@gmail.com</a>
+  </div>
+
+</div>
+
+<footer class="site-footer">
+  &copy; 2026 Join Play &middot; All rights reserved
+</footer>
+
+</body>
+</html>
