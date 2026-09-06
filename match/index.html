@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Abrir no Join Play</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 24px;
+    text-align: center;
+    background: #0b0f14;
+    color: #f2f2f2;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 16px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: #2f6fed;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  p { max-width: 320px; line-height: 1.4; }
+</style>
+</head>
+<body>
+  <p id="message">Abrindo a partida no Join Play…</p>
+  <a id="fallback" class="button" href="#">Abrir no app</a>
+
+  <script>
+    var params = new URLSearchParams(window.location.search);
+    var matchId = params.get("id");
+    var appLink = matchId ? ("joinplay://match/" + encodeURIComponent(matchId)) : null;
+
+    var fallback = document.getElementById("fallback");
+    if (appLink) {
+      fallback.href = appLink;
+      window.location.replace(appLink);
+    } else {
+      document.getElementById("message").textContent = "Link de partida inválido.";
+      fallback.style.display = "none";
+    }
+  </script>
+</body>
+</html>
