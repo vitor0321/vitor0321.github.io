@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.walcker.match.app.dev",
+      "sha256_cert_fingerprints": [
+        "4F:73:20:FE:2D:AB:97:CC:D1:2C:43:C3:D8:2E:79:C8:83:C9:9D:E3:A2:F0:0B:99:99:D0:25:53:FC:EC:75:FE"
+      ]
+    }
+  }
+]
