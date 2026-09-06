@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "JBCX8H36VY.org.walcker.match.Match",
+        "paths": ["/match/*"]
+      },
+      {
+        "appID": "JBCX8H36VY.org.walcker.match.Match.debug",
+        "paths": ["/match/*"]
+      }
+    ]
+  }
+}
