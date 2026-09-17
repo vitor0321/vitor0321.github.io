@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Join Play — vagas em partidas esportivas</title>
+<meta name="description" content="O Join Play conecta quem tem vaga sobrando numa partida esportiva com quem quer jogar. Anuncie a vaga, encontre partidas perto de você e entre em campo.">
+<link rel="icon" href="logo.png">
+<style>
+  :root {
+    color-scheme: dark;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at 50% 0%, #10182b 0%, #060a12 70%);
+    background-attachment: fixed;
+    color: #f2f2f2;
+    line-height: 1.6;
+  }
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+  }
+  header {
+    text-align: center;
+  }
+  .logo {
+    width: 96px;
+    height: 96px;
+    border-radius: 24px;
+    box-shadow: 0 12px 32px rgba(255, 140, 0, 0.25);
+  }
+  .wordmark {
+    margin: 20px 0 4px;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+  }
+  .wordmark .join { color: #ffffff; }
+  .wordmark .play {
+    background: linear-gradient(90deg, #ff7a1a, #ffc233);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .tagline {
+    margin: 0 auto 8px;
+    max-width: 520px;
+    font-size: 19px;
+    color: #e6e9f0;
+  }
+  .lead {
+    margin: 16px auto 0;
+    max-width: 620px;
+    color: #c7cbd6;
+  }
+  a.button {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 14px 32px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #ff7a1a, #ffc233);
+    color: #12100a;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    box-shadow: 0 8px 20px rgba(255, 140, 0, 0.3);
+  }
+  .button-note {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #8f96a6;
+  }
+  section {
+    margin-top: 56px;
+  }
+  h2 {
+    font-size: 21px;
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+  .steps {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .steps li {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 20px;
+  }
+  .steps strong {
+    display: block;
+    margin-bottom: 6px;
+    color: #ffb054;
+    font-size: 15px;
+  }
+  .steps p {
+    margin: 0;
+    color: #c7cbd6;
+    font-size: 15px;
+  }
+  .features {
+    padding-left: 20px;
+    margin: 0;
+    color: #c7cbd6;
+  }
+  .features li {
+    margin-bottom: 8px;
+  }
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    font-size: 14px;
+    color: #8f96a6;
+  }
+  footer a {
+    color: #ffb054;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img class="logo" src="logo.png" alt="Join Play">
+    <p class="wordmark"><span class="join">Join</span> <span class="play">Play</span></p>
+    <p class="tagline">Encontre vagas em partidas esportivas perto de você.</p>
+    <p class="lead">
+      O Join Play é um aplicativo de celular para quem joga futebol, vôlei, basquete e outros
+      esportes com amigos. Quem organiza uma partida e ficou com vaga sobrando anuncia no app.
+      Quem quer jogar procura partidas por esporte, dia e região, e entra na que couber no seu
+      horário. Depois do jogo, jogadores e organizadores se avaliam, então todo mundo sabe com
+      quem está marcando.
+    </p>
+    <a class="button" href="joinplay://match">Abrir o app</a>
+    <p class="button-note">Este botão abre o Join Play no seu celular, se você já tiver o app instalado.</p>
+  </header>
+
+  <section>
+    <h2>Como funciona</h2>
+    <ol class="steps">
+      <li>
+        <strong>1. Anuncie a vaga</strong>
+        <p>Você marcou a partida, o local está reservado e faltam jogadores. Publique quantas vagas sobraram.</p>
+      </li>
+      <li>
+        <strong>2. Entre na partida</strong>
+        <p>Procure partidas por esporte e região, veja horário, local e preço, e confirme sua presença.</p>
+      </li>
+      <li>
+        <strong>3. Jogue e avalie</strong>
+        <p>Depois do jogo, jogadores e organizadores se avaliam. Boas avaliações rendem convites.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>O que dá para fazer no app</h2>
+    <ul class="features">
+      <li>Buscar partidas por esporte, data e região, inclusive em cidades vizinhas.</li>
+      <li>Criar uma partida com local, horário, número de vagas e valor por jogador.</li>
+      <li>Gerenciar quem está confirmado, com lista de espera quando a partida lota.</li>
+      <li>Sortear os times antes do jogo começar.</li>
+      <li>Avaliar jogadores e organizadores depois da partida.</li>
+      <li>Receber avisos de partidas novas e de mudanças nas que você vai jogar.</li>
+      <li>Marcar que você está disponível para jogar hoje e ser chamado por quem tem vaga.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>
+      Join Play — aplicativo para Android e iOS.
+      <a href="join-play-privacy-policy.html">Política de privacidade e termos de uso</a>.
+    </p>
+    <p>Contato: <a href="mailto:SEU-EMAIL-AQUI">SEU-EMAIL-AQUI</a></p>
+  </footer>
+</main>
+</body>
+</html>
